@@ -1,28 +1,76 @@
-Package: com.supermamon.newpackage
-Version: 2.0.0-1
+Package: bag.xml.vineredirect
+Name: VineRedirect
+Description: Allows you to redirect Vine's apiary traffic to a custom URL. UPDATE 2.0: Added a few refinements.
+Maintainer: bag.xml
+Author: bag.xml
 Section: Tweaks
-Maintainer: Reposi3 <reposithree@gmail.com>
-Depends: firmware (>7.0), mobilesubstrate
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware (>= 6.0)
 Architecture: iphoneos-arm
-Filename: ./debs/com.supermamon.newpackage_2.0.0-1_iphoneos-arm.deb
-Size: 854
-MD5sum: 85a01c41aaaa72b48b08d9d0a67f3016
-Description: This is a sample new package. Firmware should be greater than 7.0
-Name: New Package
-Author: Reposi3 <reposithree@gmail.com>
-Depiction: https://supermamon.github.io/Reposi3/depictions/?p=com.supermamon.newpackage
+Version: 2.0-4+debug
+Installed-Size: 360
 
-Package: com.supermamon.oldpackage
-Version: 1.0.0-1
+Package: com.bruhdude.vinesslpinningdisabler
+Name: vinesslpinningdisabler
+Description: buh-bye ssl pinning... rest in piss!
+Maintainer: bruhdude
+Author: bruhdude
 Section: Tweaks
-Maintainer: Reposi3 <reposithree@gmail.com>
-Depends: firmware (<7.0)
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware (>= 6.0)
 Architecture: iphoneos-arm
-Filename: ./debs/com.supermamon.oldpackage_1.0.0-1_iphoneos-arm.deb
-Size: 860
-MD5sum: 8c606f0c05217aa2a20949091fe516f0
-Description: This is a sample old package. Firmware should be lower than 7.0
-Name: Old Package
-Author: Reposi3 <reposithree@gmail.com>
-Depiction: https://supermamon.github.io/Reposi3/depictions/?p=com.supermamon.oldpackage
+Version: 2.0-1+debug
+Installed-Size: 136
 
+Package: com.bruhdude.vinetwitterproxy
+Name: Vine Twitter Proxy
+Description: This tweak lets you change the API URL used for the Twitter login in the Vine app.
+Maintainer: bruhdude
+Author: bruhdude
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware (>= 6.0)
+Architecture: iphoneos-arm
+Version: 1.0-3+debug
+Installed-Size: 296
+
+Package: com.hackyouriphone.vinedownloader
+Name: VineDownloader
+Version: 0.0.8-16
+Depends: firmware (>= 5.0), mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.2)
+Architecture: iphoneos-arm
+Author: Stevie Hetelekides <repo@hackyouriphone.org>
+Depiction: http://repo.hackyouriphone.org/depiction/depiction.php?filename=vinedownloader
+Section: HYI - Tweaks
+Description: download Vine videos into Camera Roll.
+Homepage: http://repo.hackyouriphone.org/depiction/depiction.php?filename=vinedownloader
+Maintainer: iLeoLion <repo@hackyouriphone.org>
+
+Package: me.dragonslayers.vinemod
+Depends: firmware (>= 6.0), firmware (<< 8.0), mobilesubstrate (>= 0.9.5000), preferenceloader
+Name: Vine12S
+Version: 3.0
+Architecture: iphoneos-arm
+Description: record Vine videos up to 12 secs
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=vine12sDp
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=vine12sDp
+Installed-Size: 83
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Author: DragonSlayers <pwxown@gmail.com>
+Sponsor: thebigboss.org <http://thebigboss.org>
+Section: Tweaks
+dev: dragonslayers
+Tag: purpose::extension, role::enduser, ios7support::1
+Icon: file:///Library/PreferenceBundles/Vine12S.bundle/Vine12S.png
+
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=vineplusplusDp
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=vineplusplusDp
+Author: UnlimApps Inc. <support@unlimapps.com>
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Name: Vine ++
+Package: com.unlimapps.vineplus
+Depends: firmware (>= 7.0), mobilesubstrate, com.unlimapps.uasharedtools (>= 2.0r-79)
+Section: Tweaks
+Version: 1.5r-47
+Installed-Size: 2913
+Architecture: iphoneos-arm
+Description: download Vine videos to camera roll
+dev: i4iphones
+Tag: purpose::extension, compatible::ios7, compatible::ios8, compatible::ios9
