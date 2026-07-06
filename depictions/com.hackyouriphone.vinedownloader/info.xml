@@ -1,0 +1,23 @@
+<package>
+	<id>com.hackyouriphone.vinedownloader</id>
+	<name>VineDownloader</name>
+	<version>0.0.8-16</version>
+	<compatibility>
+		<firmware>
+			<maxiOS>unknown</maxiOS>
+			<otherVersions>unconfirmed</otherVersions>
+			<!--
+			for otherVersions, you can put either unsupported or unconfirmed
+			-->
+		</firmware>
+	</compatibility>
+	<dependencies></dependencies>
+	<descriptionlist>
+		<description>download Vine videos into Camera Roll.</description>
+	</descriptionlist>
+	<screenshots></screenshots>
+	<changelog>
+		<change>Initial release</change>
+	</changelog>
+	<links></links>
+</package>

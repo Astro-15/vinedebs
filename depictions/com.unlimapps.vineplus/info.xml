@@ -1,0 +1,23 @@
+<package>
+	<id>com.unlimapps.vineplus</id>
+	<name>Vine ++</name>
+	<version>1.5r-47</version>
+	<compatibility>
+		<firmware>
+			<maxiOS>unknown</maxiOS>
+			<otherVersions>unconfirmed</otherVersions>
+			<!--
+			for otherVersions, you can put either unsupported or unconfirmed
+			-->
+		</firmware>
+	</compatibility>
+	<dependencies></dependencies>
+	<descriptionlist>
+		<description>download Vine videos to camera roll</description>
+	</descriptionlist>
+	<screenshots></screenshots>
+	<changelog>
+		<change>Initial release</change>
+	</changelog>
+	<links></links>
+</package>

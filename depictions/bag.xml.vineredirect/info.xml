@@ -1,0 +1,23 @@
+<package>
+	<id>bag.xml.vineredirect</id>
+	<name>Vine Redirect</name>
+	<version>2.0-4</version>
+	<compatibility>
+		<firmware>
+			<maxiOS>14.x</maxiOS>
+			<otherVersions>unconfirmed</otherVersions>
+			<!--
+			for otherVersions, you can put either unsupported or unconfirmed
+			-->
+		</firmware>
+	</compatibility>
+	<dependencies></dependencies>
+	<descriptionlist>
+		<description>Allows you to redirect Vine's apiary traffic to a custom URL. UPDATE 2.0: Added a few refinements.</description>
+	</descriptionlist>
+	<screenshots></screenshots>
+	<changelog>
+		<change>Initial release</change>
+	</changelog>
+	<links></links>
+</package>

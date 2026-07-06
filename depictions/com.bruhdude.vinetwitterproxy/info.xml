@@ -1,0 +1,23 @@
+<package>
+	<id>com.bruhdude.vinetwitterproxy</id>
+	<name>Vine Twitter Proxy</name>
+	<version>1.0-3</version>
+	<compatibility>
+		<firmware>
+			<maxiOS>unknown</maxiOS>
+			<otherVersions>unconfirmed</otherVersions>
+			<!--
+			for otherVersions, you can put either unsupported or unconfirmed
+			-->
+		</firmware>
+	</compatibility>
+	<dependencies></dependencies>
+	<descriptionlist>
+		<description>This tweak lets you change the API URL used for the Twitter login in the Vine app.</description>
+	</descriptionlist>
+	<screenshots></screenshots>
+	<changelog>
+		<change>Initial release</change>
+	</changelog>
+	<links></links>
+</package>

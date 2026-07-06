@@ -1,0 +1,23 @@
+<package>
+	<id>com.bruhdude.vinesslpinningdisabler</id>
+	<name>Vine SSL Pinning Disabler</name>
+	<version>2.0-1</version>
+	<compatibility>
+		<firmware>
+			<maxiOS>unknown</maxiOS>
+			<otherVersions>unconfirmed</otherVersions>
+			<!--
+			for otherVersions, you can put either unsupported or unconfirmed
+			-->
+		</firmware>
+	</compatibility>
+	<dependencies></dependencies>
+	<descriptionlist>
+		<description>buh-bye ssl pinning... rest in piss!</description>
+	</descriptionlist>
+	<screenshots></screenshots>
+	<changelog>
+		<change>Initial release</change>
+	</changelog>
+	<links></links>
+</package>
