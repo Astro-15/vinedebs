@@ -56,7 +56,7 @@ Size: 15028
 MD5sum: e8936f08c467d77f89ed60337b867768
 SHA1: df16849647a1ee2e09497e84fc20eb8a2376ae25
 SHA256: fa8e19ec484f239701a0126c8b9d46291082fddbe7f5e23b15fa8e9f39d55800
-Section: Tweaks
+Section: HYI - Tweaks
 Homepage: http://repo.hackyouriphone.org/depiction/depiction.php?filename=vinedownloader
 Description: download Vine videos into Camera Roll.
 Author: Stevie Hetelekides <repo@hackyouriphone.org>
