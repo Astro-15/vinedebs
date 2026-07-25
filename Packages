@@ -3,7 +3,7 @@ Version: 2.0-4+debug
 Architecture: iphoneos-arm
 Maintainer: bag.xml
 Installed-Size: 360
-Depends: firmware (>= 5.0), firmware (<< 10.0), mobilesubstrate (>= 0.9.5000), preferenceloader
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware (>= 6.0)
 Filename: ./debs/bag.xml.vineredirect_2.0-4+debug_iphoneos-arm.deb
 Size: 26410
 MD5sum: 86f9f61a3638c44cb1cd3f65d6c35cf8
@@ -19,7 +19,7 @@ Version: 2.0-1+debug
 Architecture: iphoneos-arm
 Maintainer: bruhdude
 Installed-Size: 136
-Depends: firmware (>= 5.0), firmware (<< 10.0), mobilesubstrate (>= 0.9.5000), preferenceloader
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware (>= 6.0)
 Filename: ./debs/com.bruhdude.vinesslpinningdisabler_2.0-1+debug_iphoneos-arm.deb
 Size: 3966
 MD5sum: 4f9d73ed35ea63a1366cd699a2e91a3a
@@ -35,7 +35,7 @@ Version: 1.0-3+debug
 Architecture: iphoneos-arm
 Maintainer: bruhdude
 Installed-Size: 296
-Depends: firmware (>= 5.0), firmware (<< 10.0), mobilesubstrate (>= 0.9.5000), preferenceloader
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware (>= 6.0)
 Filename: ./debs/com.bruhdude.vinetwitterproxy_1.0-3+debug_iphoneos-arm.deb
 Size: 17238
 MD5sum: 5fa8298ba369d99322391c1746ef610b
@@ -50,7 +50,7 @@ Package: com.hackyouriphone.vinedownloader
 Version: 0.0.8-16
 Architecture: iphoneos-arm
 Maintainer: iLeoLion <repo@hackyouriphone.org>
-Depends: firmware (>= 5.0), firmware (<< 10.0), mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.2)
+Depends: firmware (>= 5.0), mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.2)
 Filename: ./debs/com.hackyouriphone.vinedownloader_0.0.8-16_iphoneos-arm.deb
 Size: 15028
 MD5sum: e8936f08c467d77f89ed60337b867768
@@ -68,7 +68,7 @@ Version: 1.5r-47
 Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 2913
-Depends: firmware (>= 5.0), firmware (<< 10.0), mobilesubstrate, com.unlimapps.uasharedtools (>= 2.0r-79)
+Depends: firmware (>= 7.0), mobilesubstrate, com.unlimapps.uasharedtools (>= 2.0r-79)
 Filename: ./debs/vineplusplus_1.5r-47.deb
 Size: 647360
 MD5sum: 0c9f3fe1d50f61647cde15b3a33d0b54
@@ -88,7 +88,7 @@ Version: 3.0
 Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 83
-Depends: firmware (>= 5.0), firmware (<< 10.0), mobilesubstrate (>= 0.9.5000), preferenceloader
+Depends: firmware (>= 6.0), firmware (<< 8.0), mobilesubstrate (>= 0.9.5000), preferenceloader
 Filename: ./debs/vine12s_3.0.deb
 Size: 11288
 MD5sum: 3ec700b5487bc6d1d9a92dc17a939e4b
