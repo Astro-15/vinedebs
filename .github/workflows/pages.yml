@@ -23,12 +23,13 @@ jobs:
         run: |
           dpkg-scanpackages -m ./debs > ./Packages
           bzip2 -k -f ./Packages
+          gzip -k -f ./Packages
           zstd -k -f ./Packages -o ./Packages.zst
 
       - name: Commit and Push if changed
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
-          git add Packages Packages.bz2 Packages.zst || true
+          git add Packages Packages.bz2 Packages.gz Packages.zst || true
           git commit -m "Auto-update repository packages index" || true
           git push
