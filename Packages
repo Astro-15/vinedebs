@@ -30,6 +30,22 @@ Description: buh-bye ssl pinning... rest in piss!
 Author: bruhdude
 Name: vinesslpinningdisabler
 
+Package: com.bruhdude.vinetwitterproxy
+Version: 1.0-3+debug
+Architecture: iphoneos-arm
+Maintainer: bruhdude
+Installed-Size: 296
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware (>= 6.0)
+Filename: ./debs/com.bruhdude.vinetwitterproxy_1.0-3+debug_iphoneos-arm.deb
+Size: 17238
+MD5sum: 5fa8298ba369d99322391c1746ef610b
+SHA1: 65230d3089bcb9c0a188ec68c10bd4e8faa6ee8d
+SHA256: 9488a8ed6fc7b24ad6f5c23606db07ef5b95bdebbf5590bfdd6e610bfafeea5f
+Section: Tweaks
+Description: This tweak lets you change the API URL used for the Twitter login in the Vine app.
+Author: bruhdude
+Name: Vine Twitter Proxy
+
 Package: com.hackyouriphone.vinedownloader
 Version: 0.0.8-16
 Architecture: iphoneos-arm
