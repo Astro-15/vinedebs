@@ -3,6 +3,6 @@ Label: Astro15
 Suite: stable
 Version: 1.0
 Codename: ios
-Architectures: iphoneos-arm
+Architectures: iphoneos-arm armv7 armv7s arm64
 Components: main
-Description: Vine tweaks for iOS.
+Description: Just some (Old) Vine tweaks for iOS 5-10.
