@@ -1,37 +1,45 @@
-name: Build Cydia Repository
+name: Update Cydia Repo
 
 on:
   push:
+    branches:
+      - main
   workflow_dispatch:
-
-permissions:
-  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: true
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: Install dpkg-sig / utilities
-        run: sudo apt-get update && sudo apt-get install -y dpkg-dev bzip2 zstd
-
-      - name: Generate Packages and Metadata
+      - name: Setup dpkg-scanpackages
         run: |
-          dpkg-scanpackages -m ./debs > ./Packages
-          bzip2 -k -f ./Packages
-          gzip -k -f ./Packages
-          zstd -k -f ./Packages -o ./Packages.zst
+          sudo apt-get update
+          sudo apt-get install -y dpkg-dev bzip2 zstd
 
       - name: Generate Packages and Metadata
         run: |
           dpkg-scanpackages -m ./debs /dev/null > ./Packages
-          # Automatically normalize firmware dependencies for all packages to iOS 5.0 - 10.0
+          
+          # 1. NUKE DEPENDENCIES: Strip all dependencies from vineredirect so Cydia cannot hide it
+          sed -i '/Package: bag.xml.vineredirect/,/^$/ s/^Depends:.*/Depends: /' ./Packages
+          
+          # 2. NUKE DEBUG TAGS: Remove "+debug" from all versions (fixes legacy dpkg parsing bugs)
+          sed -i 's/+debug//g' ./Packages
+          
+          # 3. STANDARD FIX: Apply the safe firmware range to whatever is left for the other tweaks
           sed -i 's/Depends: \(.*\), firmware (>= [0-9.]*)/Depends: \1, firmware (>= 5.0), firmware (<< 10.0)/g' ./Packages
           sed -i '/^Depends:.*firmware/! s/Depends: \(.*\)/Depends: \1, firmware (>= 5.0), firmware (<< 10.0)/g' ./Packages
+          
           bzip2 -k -f ./Packages
           gzip -k -f ./Packages
           zstd -k -f ./Packages -o ./Packages.zst
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add Packages Packages.gz Packages.bz2 Packages.zst
+          git commit -m "Automated repo update: nuke dependency/debug blocks for vineredirect" || exit 0
+          git push
