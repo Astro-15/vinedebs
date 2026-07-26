@@ -22,15 +22,13 @@ jobs:
         run: |
           dpkg-scanpackages -m ./debs /dev/null > ./Packages
           
-          # 1. NUKE DEPENDENCIES: Strip all dependencies from vineredirect so Cydia cannot hide it
-          sed -i '/Package: bag.xml.vineredirect/,/^$/ s/^Depends:.*/Depends: /' ./Packages
+          # Remove all firmware version constraints so tweaks show on any iOS version
+          sed -i 's/, firmware ([^)]*)[,]*/,/g' ./Packages
+          sed -i 's/^Depends: ,/Depends: /' ./Packages
+          sed -i 's/, mobilesubstrate/mobilesubstrate/g' ./Packages
           
-          # 2. NUKE DEBUG TAGS: Remove "+debug" from all versions (fixes legacy dpkg parsing bugs)
+          # Remove "+debug" from all versions (fixes legacy dpkg parsing bugs)
           sed -i 's/+debug//g' ./Packages
-          
-          # 3. STANDARD FIX: Apply the safe firmware range to whatever is left for the other tweaks
-          sed -i 's/Depends: \(.*\), firmware (>= [0-9.]*)/Depends: \1, firmware (>= 5.0), firmware (<< 10.0)/g' ./Packages
-          sed -i '/^Depends:.*firmware/! s/Depends: \(.*\)/Depends: \1, firmware (>= 5.0), firmware (<< 10.0)/g' ./Packages
           
           bzip2 -k -f ./Packages
           gzip -k -f ./Packages
@@ -41,5 +39,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add Packages Packages.gz Packages.bz2 Packages.zst
-          git commit -m "Automated repo update: nuke dependency/debug blocks for vineredirect" || exit 0
+          git commit -m "Automated repo update: remove firmware constraints for universal compatibility" || exit 0
           git push
